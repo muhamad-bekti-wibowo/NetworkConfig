@@ -12,7 +12,7 @@
 
 class NetworkConfig {
 public:
-    NetworkConfig(EEPROMManager& eeprom, int eepromAddress = 100);
+    NetworkConfig(EEPROMManager& eeprom, int eepromAddress = 100,int sizeEeprom = 512);
     void begin();
     void handleClient();
     AsyncWebServer* getServer();
