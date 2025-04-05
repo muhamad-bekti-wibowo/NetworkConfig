@@ -9,8 +9,8 @@ AsyncWebServer* NetworkConfig::getServer() {
     return &_server;
 }
 
-void NetworkConfig::begin() {
-    _eeprom.begin(512);
+void NetworkConfig::begin(int sizeeeprom) {
+    _eeprom.begin(sizeeeprom);
     
     WiFi.mode(WIFI_AP_STA);
     WiFi.disconnect();
