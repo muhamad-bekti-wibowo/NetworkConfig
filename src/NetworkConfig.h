@@ -32,6 +32,8 @@ private:
     void setupAPMode();
     void setupSTAAndAPMode();
     void setupServerHandlers();
+    
+    int _sizeEeprom;
 };
 
 #endif
