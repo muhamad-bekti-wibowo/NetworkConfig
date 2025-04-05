@@ -57,3 +57,7 @@ void setup()
   server->on("/ChangeNetworkSetting", HTTP_POST, [&](AsyncWebServerRequest *request)
              { networkConfig.handleNetworkSettingsChange(request); });
 }
+void loop()
+{ 
+  networkConfig.handleClient();
+}
