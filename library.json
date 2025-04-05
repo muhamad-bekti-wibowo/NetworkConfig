@@ -1,0 +1,19 @@
+{
+  "name": "NetworkConfig",
+  "version": "1.0.0",
+  "keywords": "wifi, esp8266, esp32, eeprom, ap, fallback",
+  "description": "A WiFi configuration handler with EEPROM and AP fallback for ESP8266/ESP32.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhamad-bekti-wibowo/NetworkConfig"
+  },
+  "authors": [
+    {
+      "name": "Muhamad Bekti Wibowo",
+      "url": "https://github.com/muhamad-bekti-wibowo"
+    }
+  ],
+  "frameworks": ["arduino"],
+  "platforms": ["espressif8266", "espressif32"],
+  "dependencies": []
+}

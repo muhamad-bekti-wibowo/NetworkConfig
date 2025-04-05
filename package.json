@@ -1,0 +1,12 @@
+{
+  "name": "networkconfig",
+  "version": "1.0.0",
+  "description": "Library to handle WiFi configuration with EEPROM and fallback AP mode on ESP8266/ESP32.",
+  "main": "NetworkConfig.h",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhamad-bekti-wibowo/NetworkConfig"
+  },
+  "author": "Muhamad Bekti Wibowo",
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+NetworkConfig	KEYWORD1
+begin	KEYWORD2
+getServer	KEYWORD2
+handleClient	KEYWORD2
+setupAPMode	KEYWORD2
+setupServerHandlers	KEYWORD2
+handleNetworkSettingsChange	KEYWORD2
