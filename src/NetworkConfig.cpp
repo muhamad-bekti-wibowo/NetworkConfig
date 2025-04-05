@@ -1,16 +1,16 @@
 #include "NetworkConfig.h"
 #include "DataParser.h"
 #include "Redirect.h"
-NetworkConfig::NetworkConfig(EEPROMManager& eeprom, int eepromAddress) 
-    : _eeprom(eeprom), _eepromAddress(eepromAddress), _server(80) {
+NetworkConfig::NetworkConfig(EEPROMManager& eeprom, int eepromAddress, int sizeEeprom) 
+    : _eeprom(eeprom), _eepromAddress(eepromAddress), _sizeEeprom(sizeEeprom), _server(80) {
 }
 
 AsyncWebServer* NetworkConfig::getServer() {
     return &_server;
 }
 
-void NetworkConfig::begin(int sizeeeprom) {
-    _eeprom.begin(sizeeeprom);
+void NetworkConfig::begin() {
+    _eeprom.begin(_sizeEeprom);
     
     WiFi.mode(WIFI_AP_STA);
     WiFi.disconnect();
