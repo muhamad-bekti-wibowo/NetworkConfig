@@ -12,17 +12,18 @@
 
 class NetworkConfig {
 public:
-    NetworkConfig(EEPROMManager& eeprom, int eepromAddress = 100,int sizeEeprom = 512);
+    NetworkConfig(EEPROMManager& eeprom, int eepromAddress = 100);
     void begin();
     void handleClient();
     AsyncWebServer* getServer();
     
     // Network settings change handler
-    void handleNetworkSettingsChange(AsyncWebServerRequest *request);
-    
+    void handleNetworkSettings(AsyncWebServerRequest *request);
+    String readSSID();
     // Configuration properties
     bool shouldRestart = false;
-
+    String apNamePrefix = "[CONFIG MODE]";
+    void setApNamePrefix(const String& newPrefix) { apNamePrefix = newPrefix; }
 private:
     EEPROMManager& _eeprom;
     int _eepromAddress;
@@ -32,8 +33,6 @@ private:
     void setupAPMode();
     void setupSTAAndAPMode();
     void setupServerHandlers();
-    
-    int _sizeEeprom;
 };
 
 #endif
